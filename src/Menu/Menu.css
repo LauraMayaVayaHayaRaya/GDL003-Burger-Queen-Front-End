@@ -1,0 +1,14 @@
+button {
+	display: block;
+	padding: 30px;
+	margin: 15px 20px;
+	width: 300px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 22px;
+}
+
+p {
+	margin-left: 20px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 35px;
+}

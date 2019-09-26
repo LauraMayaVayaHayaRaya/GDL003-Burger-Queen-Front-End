@@ -1,0 +1,38 @@
+body {
+  background-color: #fff;
+}
+
+.App-header {
+  background-color: #95dcdc;
+  display: block;
+  padding: 10px;
+  text-align: center;
+}
+
+.App-logo {
+  height: 100px;
+}
+
+h1 {
+/*font-family: 'Parisienne', cursive;
+font-family: 'Cormorant Garamond', serif;*/
+font-family: 'Homemade Apple', cursive;
+/*font-family: 'Kristi', cursive;
+/*font-family: 'Beth Ellen', cursive;
+/*font-family: 'Clicker Script', cursive;
+/*font-family: 'Stalemate', cursive;*/
+  font-size: 45px;
+  color: #552c4e;
+  margin: 0;
+  line-height: 50px;
+}
+
+.menuList {
+  display: inline-block;
+}
+
+.orderBoard {
+  display: inline-block;
+
+}
+
