@@ -3,7 +3,7 @@ body {
 }
 
 .App-header {
-  background-color: #95dcdc;
+  background-color: #343535;
   display: block;
   padding: 10px;
   text-align: center;
@@ -14,25 +14,29 @@ body {
 }
 
 h1 {
-/*font-family: 'Parisienne', cursive;
-font-family: 'Cormorant Garamond', serif;*/
-font-family: 'Homemade Apple', cursive;
-/*font-family: 'Kristi', cursive;
-/*font-family: 'Beth Ellen', cursive;
-/*font-family: 'Clicker Script', cursive;
-/*font-family: 'Stalemate', cursive;*/
-  font-size: 45px;
-  color: #552c4e;
+/*font-family: 'Parisienne', cursive;*/
+/*font-family: 'Cormorant Garamond', serif;*/
+font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  color: #fff;
   margin: 0;
-  line-height: 50px;
+  line-height: 60px;
+}
+
+.bodyApp {
+  width: 100%;
+  display: inline-block;
+  text-align: left;
 }
 
 .menuList {
   display: inline-block;
+  width: 40%;
+  vertical-align: top;
 }
 
 .orderBoard {
   display: inline-block;
-
+  width: 60%;
+  vertical-align: top;
 }
-

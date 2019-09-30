@@ -7,10 +7,12 @@ class Board extends Component {
 	render () {
 		return(
 			<div className="orderSection">
-				<button>MESA</button>
-				<div className="order">123</div>
-				<button>COCINA Y BAR</button>
-				<button>CUENTA</button>
+				<button className="table">MESA</button>
+				<div className="order"></div>
+				<div className="orderButtons">
+					<button className="kitchenAndBar">ENVIAR A COCINA</button>
+					<button className="check">IMPRIMIR CUENTA</button>
+				</div>
 			</div>
 		);
 	}
