@@ -4,6 +4,9 @@ import './Board.css';
 
 //function Board () {
 class Board extends Component {
+	constructor(props){
+		super(props)
+	}
 	render () {
 		return(
 			<div className="orderSection">
@@ -13,9 +16,14 @@ class Board extends Component {
 					<button className="kitchenAndBar">ENVIAR A COCINA</button>
 					<button className="check">IMPRIMIR CUENTA</button>
 				</div>
+				<div>{this.props.selectedItem.price}</div>
 			</div>
 		);
 	}
 }
 
 export default Board;
+
+
+
+

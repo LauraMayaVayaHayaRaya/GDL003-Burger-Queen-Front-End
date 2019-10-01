@@ -16,3 +16,8 @@ p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 45px;
 }
+
+.subMenu{
+	display:flex;
+	float: right;
+}
