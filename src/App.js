@@ -12,8 +12,9 @@ class App extends Component {
     this.state = { selectedItem: {} }
   }
   onProductSelected = (product) => {
-    this.setState({ selectedItem: product })
+    this.setState({ selectedItem: product})
   }
+
 
   render() {
     return (
