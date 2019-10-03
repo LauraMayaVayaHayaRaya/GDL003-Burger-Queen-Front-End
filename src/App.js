@@ -9,11 +9,14 @@ import Menu from './Menu/Menu.jsx';
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { selectedItem: {} }
+    this.state = { selectedItem:[]}
   }
   onProductSelected = (product) => {
-    this.setState({ selectedItem: product})
+    this.setState({selectedItem:[...this.state.selectedItem, product]})
+
   }
+
+
 
 
   render() {
@@ -30,6 +33,7 @@ class App extends Component {
           <div className="orderBoard">
             <Board
               selectedItem={this.state.selectedItem}
+
             />
           </div>
         </div>
