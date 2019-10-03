@@ -17,7 +17,7 @@ class Board extends Component {
 						console.log(element.name, element.price)
 
 						//key=element.key		 	
-						return (<li>{element.name}</li>)
+						return (<li>{element.name}   {element.price}</li>)
 					})
 
 					}
@@ -27,8 +27,8 @@ class Board extends Component {
 				</div>
 
 				<div className="orderButtons">
-					<button className="kitchenAndBar">ENVIAR A COCINA</button>
-					<button className="check">IMPRIMIR CUENTA</button>
+					<button className="kitchenAndBar">ENVIAR A COCINA </button>
+					<button className="check"> IMPRIMIR CUENTA</button>
 				</div>
 			</div>
 
