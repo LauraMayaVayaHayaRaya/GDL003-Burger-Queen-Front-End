@@ -1,0 +1,23 @@
+button {
+	display: block;
+	padding: 30px;
+	margin: 15px 20px;
+	width: 300px;
+	/*font-family: 'Cormorant Garamond', serif;*/
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+}
+
+p {
+	margin-left: 20px;
+	margin-top: 18px;
+	margin-bottom: 18px;
+	/*font-family: 'Cormorant Garamond', serif;*/
+	font-family: 'Roboto', sans-serif;
+	font-size: 45px;
+}
+
+.subMenu{
+	display: flex;
+	float: right;
+}

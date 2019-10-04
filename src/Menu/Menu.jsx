@@ -14,7 +14,8 @@ class Menu extends Component {
 			console.log(menuItems);
 			children = (
 				<div>
-					{Object.keys(menuItems).map((v)=> <button key={v} onClick={()=>addToBoard(v)}>{menuItems[v].name}</button>)}
+					{Object.keys(menuItems).map((v)=>
+					<button key={v} onClick={()=>addToBoard(v)}>{menuItems[v].name}</button>)}
 				</div>
 			)
 		}
@@ -22,7 +23,8 @@ class Menu extends Component {
 			<div className="Menu">
 				<p>Menú</p>
 				<div className="parentMenu">
-				{Object.keys(menuItems).map((v)=> <button key={v} onClick={()=>showChildren(v)}>{menuItems[v].name}</button>)}
+				{Object.keys(menuItems).map((v)=>
+				<button key={v} onClick={()=>showChildren(v)}>{menuItems[v].name}</button>)}
 				</div>
 				<div className="childrenMenu">
 					{children}
