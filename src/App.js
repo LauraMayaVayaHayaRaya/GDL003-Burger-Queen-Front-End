@@ -3,12 +3,14 @@ import React, { Component } from 'react';
 import './App.css';
 import img from './img/photoApp.svg';
 import Board from './Board/Board.jsx';
+import Table from './Table/Table.jsx';
 import Menu from './Menu/Menu.jsx';
 
 //function App() {
 class App extends Component {
   constructor(props) {
     super(props)
+
     this.state = { selectedItem: [] }
   }
 
@@ -58,6 +60,7 @@ class App extends Component {
  */
 
 
+   
   render() {
     return (
       <div className="mainContainer" >
@@ -66,13 +69,19 @@ class App extends Component {
           <h1>APP NAME</h1>
         </div>
         <div className="bodyApp">
+          <div className="createOrder">
+            <Table/>
+          </div>
           <div className="menuList">
             <Menu onProductSelected={this.onProductSelected} />
           </div>
           <div className="orderBoard">
             <Board
               selectedItem={this.state.selectedItem}
+
               deleteEvent={this.deleteEvent}
+
+
             />
           </div>
         </div>
