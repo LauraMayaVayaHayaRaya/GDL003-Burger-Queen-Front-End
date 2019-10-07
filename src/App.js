@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import img from './img/photoApp.svg';
+import Table from './Table/Table.jsx';
 import Board from './Board/Board';
 import Menu from './Menu/Menu.jsx';
 
@@ -17,8 +18,6 @@ class App extends Component {
   }
 
 
-
-
   render() {
     return (
       <div className="mainContainer">
@@ -27,13 +26,15 @@ class App extends Component {
           <h1>APP NAME</h1>
         </div>
         <div className="bodyApp">
+          <div className="createOrder">
+            <Table/>
+          </div>
           <div className="menuList">
             <Menu onProductSelected={this.onProductSelected} />
           </div>
           <div className="orderBoard">
             <Board
               selectedItem={this.state.selectedItem}
-
             />
           </div>
         </div>

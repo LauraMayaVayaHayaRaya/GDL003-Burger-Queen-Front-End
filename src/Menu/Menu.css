@@ -1,7 +1,7 @@
 button {
 	display: block;
 	padding: 30px;
-	margin: 15px 20px;
+	margin: 0 20px 15px 20px;
 	width: 300px;
 	/*font-family: 'Cormorant Garamond', serif;*/
 	font-family: 'Roboto', sans-serif;
@@ -15,4 +15,18 @@ p {
 	/*font-family: 'Cormorant Garamond', serif;*/
 	font-family: 'Roboto', sans-serif;
 	font-size: 45px;
+}
+
+.subMenu{
+	display: inline-block;
+	width: 50%;
+	height: 400px;
+	overflow: auto;
+	margin-top: 0px;
+}
+
+.menuPrincipal {
+	display: inline-block;
+	width: 50%;
+
 }

@@ -183,6 +183,21 @@ const menuJson = {
 					"price": "25.00"
 				}
 			]
+		},
+		{
+			"name": "EXTRAS",
+			"subcategories": [
+				{
+					"id": "queso-mozzarella",
+					"name": "Queso Mozarella",
+					"price": "10.00"
+				},
+				{
+					"id": "queso-cabra",
+					"name": "Queso de Cabra",
+					"price": "10.00"
+				}
+			]
 		}
 	]
 }

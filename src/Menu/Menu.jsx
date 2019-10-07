@@ -1,33 +1,38 @@
 import React, { Component } from 'react';
 import './Menu.css';
-import MenuCategories from './Menu.json';
-
+import menuJson from './MenuJson'
 //function Board () {
 class Menu extends Component {
-	render () {
-		let children='';
-		let menuItems = MenuCategories.menu.categories;
-		function addToBoard(children){
-		}
-		function showChildren(parent){
-			let menuItems = MenuCategories.menu.categories[parent].children;
-			console.log(menuItems);
-			children = (
-				<div>
-					{Object.keys(menuItems).map((v)=>
-					<button key={v} onClick={()=>addToBoard(v)}>{menuItems[v].name}</button>)}
-				</div>
-			)
-		}
+	constructor(props) {
+		super(props)
+		this.state = { subcategory: [], selectedItem: {} }
+	}
+
+	render() {
+
 		return (
 			<div className="Menu">
 				<p>Menú</p>
-				<div className="parentMenu">
-				{Object.keys(menuItems).map((v)=>
-				<button key={v} onClick={()=>showChildren(v)}>{menuItems[v].name}</button>)}
+				<div className="menuPrincipal">
+					{menuJson.categories.map((product) =>
+						<button
+							key={product.key}
+							onClick={() => this.setState({ subcategory: product.subcategories })} >
+							{product.name}
+						</button>)
+					}
 				</div>
-				<div className="childrenMenu">
-					{children}
+				<div className="subMenu">
+					{
+						this.state.subcategory ?
+							this.state.subcategory.map((product) =>
+								<button
+									key={product.key}
+									onClick={() => this.props.onProductSelected(product)}>
+									{product.name}
+								</button>)
+							: null
+					}
 				</div>
 			</div>
 		);
