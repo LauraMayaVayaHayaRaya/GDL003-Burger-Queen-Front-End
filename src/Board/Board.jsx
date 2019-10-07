@@ -1,26 +1,35 @@
 //import React from 'react'
 import React, { Component } from 'react';
 import './Board.css';
+//import { tsExportAssignment } from '@babel/types';
 
 //function Board () {
 class Board extends Component {
 	constructor(props) {
 		super(props)
+		//this.state = { product:[]}
 	}
+	
+	
 	render() {
 		return (
 			<div className="orderSection">
 				<button className="table">MESA</button>
 
 				<div className="order" >
-					{this.props.selectedItem.map((element) => {
+					{this.props.selectedItem.map((element, index) => {
 						console.log(element.name, element.price)
 
-						//key=element.key		 	
-						return (<li>{element.name}   {element.price}</li>)
-					})
+							 	
+						return (<li> {element.name} {element.price}
+							{<button key={element.id} className="remove" onClick={() =>
+								this.props.deleteEvent(index)}
 
-					}
+							//this.props.selectedItem.splice(element, 1)
+							>Remove It</button>}</li>)
+							
+
+					})}
 
 
 
