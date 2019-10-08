@@ -19,33 +19,42 @@ class App extends Component {
     this.setState({ selectedItem: [...this.state.selectedItem, product] })
 
   }
-    
 
-  deleteEvent = (index)=> {
-   const deletedPost = Object.assign([], this.state.selectedItem);
+
+  deleteEvent = (index) => {
+    const deletedPost = Object.assign([], this.state.selectedItem);
     deletedPost.splice(index, 1);
     this.setState({
       selectedItem: deletedPost
-    }) 
+    })
   }
 
+  addPrice = (element) => {
+    let score = [0]
+    const added = Object.assign([], this.state.selectedItem);
+    added.forEach(function (d) {
+      if (d.price > 1) {
+        score = [d.price]
+      } else {
+      }
+      console.log(score = score++)
+    })
+
+  };
 
 
 
+  /*const previousNotes=this.state.selectedItem;
+      for(let i=0; i<previousNotes.length; i++){
+        if(previousNotes[i].id === key){
+          previousNotes.splice(i, 1);
+      }
+         }}
+  
+  */
 
 
 
-/*const previousNotes=this.state.selectedItem;
-    for(let i=0; i<previousNotes.length; i++){
-      if(previousNotes[i].id === key){
-        previousNotes.splice(i, 1);
-    }
-       }}
-
-*/
-
-
-   
   /* removeIt = (quitProduct) => {
      [...this.state.selectedItem].map((quitProduct) => {
        for (let i = 0; i <  [...this.state.selectedItem].length; i++) {
@@ -60,7 +69,7 @@ class App extends Component {
  */
 
 
-   
+
   render() {
     return (
       <div className="mainContainer" >
@@ -70,7 +79,7 @@ class App extends Component {
         </div>
         <div className="bodyApp">
           <div className="createOrder">
-            <Table/>
+            <Table />
           </div>
           <div className="menuList">
             <Menu onProductSelected={this.onProductSelected} />
@@ -80,6 +89,8 @@ class App extends Component {
               selectedItem={this.state.selectedItem}
 
               deleteEvent={this.deleteEvent}
+
+              addPrice={this.addPrice}
 
 
             />
