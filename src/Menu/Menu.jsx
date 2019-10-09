@@ -14,9 +14,9 @@ class Menu extends Component {
 			<div className="Menu">
 				<p>Menú</p>
 				<div className="menuPrincipal">
-					{menuJson.categories.map((product) =>
+					{menuJson.categories.map((product, i) =>
 						<button
-							key={product.key}
+							key={i}
 							onClick={() => this.setState({ subcategory: product.subcategories })} >
 							{product.name}
 						</button>)
@@ -25,9 +25,9 @@ class Menu extends Component {
 				<div className="subMenu">
 					{
 						this.state.subcategory ?
-							this.state.subcategory.map((product) =>
+							this.state.subcategory.map((product, i) =>
 								<button
-									key={product.key}
+									key={i}
 									onClick={() => this.props.onProductSelected(product)}>
 									{product.name}
 								</button>)

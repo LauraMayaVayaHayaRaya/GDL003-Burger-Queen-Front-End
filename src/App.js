@@ -6,18 +6,19 @@ import Board from './Board/Board.jsx';
 import Table from './Table/Table.jsx';
 import Menu from './Menu/Menu.jsx';
 
+
 //function App() {
 class App extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { selectedItem: [] }
+    this.state = { selectedItem: [], price: 0  }
   }
 
 
   onProductSelected = (product) => {
     this.setState({ selectedItem: [...this.state.selectedItem, product] })
-
+    this.addPrice();
   }
 
 
@@ -30,19 +31,39 @@ class App extends Component {
   }
 
   addPrice = (element) => {
-    let score = [0]
+    let suma=0;
+   // let score = []
+    console.log(this.state.selectedItem)
     const added = Object.assign([], this.state.selectedItem);
-    added.forEach(function (d) {
+  for(let index=0; index<added.length; index++){
+    console.log(parseInt(added[index].price))
+  suma+=parseInt(added[index].price);
+//score.push(added[index].price)
+  }
+
+  this.setState({
+   price : suma 
+  })
+
+
+  return;
+ 
+  }  ;
+    
+    /*added.forEach(function (d) {
       if (d.price > 1) {
-        score = [d.price]
+        score = [d.price] 
       } else {
       }
-      console.log(score = score++)
+
+var sum = score.reduce(function(acc, cur) { return acc + cur; });
+      console.log(sum)
+      ;
     })
 
   };
 
-
+*/
 
   /*const previousNotes=this.state.selectedItem;
       for(let i=0; i<previousNotes.length; i++){
@@ -71,6 +92,7 @@ class App extends Component {
 
 
   render() {
+    console.log(this.state.price)
     return (
       <div className="mainContainer" >
         <div className="App-header">
@@ -90,7 +112,7 @@ class App extends Component {
 
               deleteEvent={this.deleteEvent}
 
-              addPrice={this.addPrice}
+              addPrice={this.state.price}
 
 
             />

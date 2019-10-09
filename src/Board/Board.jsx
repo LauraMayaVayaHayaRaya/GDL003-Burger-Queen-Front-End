@@ -6,10 +6,9 @@ import './Board.css';
 //function Board () {
 class Board extends Component {
 
-	
-
 
 	render() {
+		console.log(this.props.addPrice)
 		return (
 			<div className="orderSection">
 				<button className="table">MESA</button>
@@ -19,12 +18,12 @@ class Board extends Component {
 						console.log(element.name, element.price)
 
 
-						return (<li> {element.name} {element.price}
+						return (<li key={element.id}> {element.name} {element.price}
 							{<button key={element.id} className="remove" onClick={() =>
 								this.props.deleteEvent(index)}
 
 							//this.props.selectedItem.splice(element, 1)
-							>Remove It</button>} {this.props.addPrice()} </li>)
+							>Remove It</button>}  </li>)
 
 					})}
 
@@ -32,7 +31,7 @@ class Board extends Component {
 				</div>
 
 				<div className="orderButtons">
-
+					<p>{this.props.addPrice}</p>
 					<button className="printCheck">IMPRIMIR CUENTA</button>
 					<button className="closeCheck"> CERRAR CUENTA</button>
 
