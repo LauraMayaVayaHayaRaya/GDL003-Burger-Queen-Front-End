@@ -145,8 +145,6 @@ const menuJson = {
 					"name": "Ensalada Ciboulette",
 					"price": "55.00"
 				}
-
-
 			]
 		},
 		{
@@ -201,5 +199,5 @@ const menuJson = {
 		}
 	]
 }
-export default menuJson;
 
+export default menuJson;

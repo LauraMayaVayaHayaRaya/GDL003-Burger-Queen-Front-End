@@ -1,20 +1,29 @@
-button {
-	display: block;
-	padding: 30px;
-	margin: 0 20px 15px 20px;
-	width: 300px;
-	/*font-family: 'Cormorant Garamond', serif;*/
-	font-family: 'Roboto', sans-serif;
-	font-size: 22px;
-}
-
 p {
 	margin-left: 20px;
 	margin-top: 18px;
 	margin-bottom: 18px;
-	/*font-family: 'Cormorant Garamond', serif;*/
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Cormorant Garamond', serif;
 	font-size: 45px;
+}
+
+.categoriesMenu {
+	display: inline-block;
+	width: 50%;
+}
+
+.categoriesButton {
+	display: block;
+	padding: 30px;
+	margin: 0 20px 15px 20px;
+	width: 100%;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 22px;
+	font-weight: bolder;
+	color: dimgrey;
+	box-shadow:10px 10px grey;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 .subMenu{
@@ -25,9 +34,17 @@ p {
 	margin-top: 0px;
 }
 
-.menuPrincipal {
-	display: inline-block;
-	width: 50%;
-
-
+.subMenuButton {
+	display: block;
+	padding: 20px;
+	margin: 0 20px 15px 20px;
+	width: 100%;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 22px;
+	font-weight: bolder;
+	color: dimgrey;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
+
