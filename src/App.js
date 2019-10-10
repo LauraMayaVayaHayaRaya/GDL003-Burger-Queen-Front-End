@@ -6,17 +6,26 @@ import Table from './Table/Table.jsx';
 import Menu from './Menu/Menu.jsx';
 
 
+
 class App extends Component {
   constructor(props) {
     super(props)
-    this.state = { selectedItem: [] }
-  }
+
+    this.state = { selectedItem: [], price: 0 }
+
+
 
   onProductSelected = (product) => {
-    this.setState({ selectedItem: [...this.state.selectedItem, product] })
+
+    this.setState({ 
+      selectedItem: [...this.state.selectedItem, product], 
+      price: this.state.price + parseInt(product.price) 
+      })
   }
 
+
   deleteEvent = (index)=> {
+
     const deletedPost = Object.assign([], this.state.selectedItem);
     deletedPost.splice(index, 1);
     this.setState({
@@ -24,7 +33,30 @@ class App extends Component {
     })
   }
 
+
+  addPrice = (element) => {
+    let suma = 0;
+    
+    const items = this.state.selectedItem;
+
+    for (let index = 0; index < items.length; index++) {
+    
+      suma += (parseInt(items[index].price));
+     
+    
+    }
+    this.setState({
+      price: suma
+    })
+
+
+    return;
+
+  };
+
+ 
   render() {
+    console.log(this.state.price)
     return (
       <div className="mainContainer">
 
@@ -36,13 +68,25 @@ class App extends Component {
 
         <div className="bodyApp">
           <div className="createOrder">
-            <Table/>
+            <Table />
           </div>
           <div className="menuList">
             <Menu onProductSelected={this.onProductSelected}/>
           </div>
           <div className="orderBoard">
-            <Board selectedItem={this.state.selectedItem} deleteEvent={this.deleteEvent}/>
+
+            <Board
+              selectedItem={this.state.selectedItem}
+
+              deleteEvent={this.deleteEvent}
+
+              addPrice={this.state.price}
+
+
+            />
+
+           
+
           </div>
         </div>
 
