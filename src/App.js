@@ -12,14 +12,15 @@ class App extends Component {
     super(props)
 
     this.state = { selectedItem: [], price: 0 }
+  }
 
 
 
   onProductSelected = (product) => {
 
-    this.setState({ 
-      selectedItem: [...this.state.selectedItem, product], 
-      price: this.state.price + parseInt(product.price) 
+    this.setState({
+      selectedItem: [...this.state.selectedItem, product],
+      price: this.state.price + parseInt(product.price)
       })
   }
 
@@ -54,7 +55,7 @@ class App extends Component {
 
   };
 
- 
+  
   render() {
     console.log(this.state.price)
     return (
@@ -94,5 +95,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
