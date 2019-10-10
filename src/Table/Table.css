@@ -1,18 +1,33 @@
-input {
-	font-size: 30px;
-	margin-left: 20px;
-	margin-top: 18px;
-	margin-bottom: 18px;
+.tableSection {
 	display: inline;
 }
 
+input {
+	display: inline-block;
+	width: 100%;
+}
+
 .buttonOpenTable {
+	width: 100%;
+	padding: 20px;
 	font-size: 20px;
 	margin-left: 20px;
 	margin-top: 18px;
 	margin-bottom: 18px;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: bold;
+	box-shadow:10px 10px grey;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
-.tableSection {
-	display: inline;
+.asignTableNumber {
+	display: inline-block;
+	width: 50%;
+}
+
+.createOrderByTable {
+	display: inline-block;
+	width: 50%;
 }

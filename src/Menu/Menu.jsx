@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Menu.css';
 import menuJson from './MenuJson'
-//function Board () {
+
 class Menu extends Component {
 	constructor(props) {
 		super(props)
@@ -13,9 +13,9 @@ class Menu extends Component {
 		return (
 			<div className="Menu">
 				<p>Menú</p>
-				<div className="menuPrincipal">
+				<div className="categoriesMenu">
 					{menuJson.categories.map((product) =>
-						<button
+						<button className="categoriesButton"
 							key={product.key}
 							onClick={() => this.setState({ subcategory: product.subcategories })} >
 							{product.name}
@@ -26,7 +26,7 @@ class Menu extends Component {
 					{
 						this.state.subcategory ?
 							this.state.subcategory.map((product) =>
-								<button
+								<button className="subMenuButton"
 									key={product.key}
 									onClick={() => this.props.onProductSelected(product)}>
 									{product.name}

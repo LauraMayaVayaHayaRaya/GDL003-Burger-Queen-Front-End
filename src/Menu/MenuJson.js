@@ -145,8 +145,6 @@ const menuJson = {
 					"name": "Ensalada Ciboulette",
 					"price": "55.00"
 				}
-
-
 			]
 		},
 		{
@@ -181,7 +179,9 @@ const menuJson = {
 					"id": "croissant-choco",
 					"name": "Croissant de chocolate",
 					"price": "25.00"
-						},
+				}
+			]
+		},
 		{
 			"name": "EXTRAS",
 			"subcategories": [
@@ -199,5 +199,5 @@ const menuJson = {
 		}
 	]
 }
-export default menuJson;
 
+export default menuJson;
