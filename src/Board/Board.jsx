@@ -31,7 +31,7 @@ class Board extends Component {
 				</div>
 
 				<div className="orderButtons">
-					<p>{this.props.addPrice}</p>
+					<p>Total: $ {this.props.addPrice}.00</p>
 					<button className="printCheck">IMPRIMIR CUENTA</button>
 					<button className="closeCheck"> CERRAR CUENTA</button>
 

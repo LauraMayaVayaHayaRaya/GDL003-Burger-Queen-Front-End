@@ -12,13 +12,15 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { selectedItem: [], price: 0  }
+    this.state = { selectedItem: [], price: 0 }
   }
 
 
   onProductSelected = (product) => {
-    this.setState({ selectedItem: [...this.state.selectedItem, product] })
-    this.addPrice();
+    this.setState({ 
+      selectedItem: [...this.state.selectedItem, product], 
+      price: this.state.price + parseInt(product.price) 
+      })
   }
 
 
@@ -31,37 +33,37 @@ class App extends Component {
   }
 
   addPrice = (element) => {
-    let suma=0;
-   // let score = []
-    console.log(this.state.selectedItem)
-    const added = Object.assign([], this.state.selectedItem);
-  for(let index=0; index<added.length; index++){
-    console.log(parseInt(added[index].price))
-  suma+=parseInt(added[index].price);
-//score.push(added[index].price)
-  }
-
-  this.setState({
-   price : suma 
-  })
-
-
-  return;
- 
-  }  ;
+    let suma = 0;
     
-    /*added.forEach(function (d) {
-      if (d.price > 1) {
-        score = [d.price] 
-      } else {
-      }
+    const items = this.state.selectedItem;
 
-var sum = score.reduce(function(acc, cur) { return acc + cur; });
-      console.log(sum)
-      ;
+    for (let index = 0; index < items.length; index++) {
+    
+      suma += (parseInt(items[index].price));
+      //score.push(added[index].price)
+    
+    }
+    this.setState({
+      price: suma
     })
 
+
+    return;
+
   };
+
+  /*added.forEach(function (d) {
+    if (d.price > 1) {
+      score = [d.price] 
+    } else {
+    }
+
+var sum = score.reduce(function(acc, cur) { return acc + cur; });
+    console.log(sum)
+    ;
+  })
+
+};
 
 */
 
