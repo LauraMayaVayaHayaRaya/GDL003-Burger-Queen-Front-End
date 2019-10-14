@@ -35,7 +35,7 @@ class Board extends Component {
 
 				<div className="orderButtons">
 					<button className="printCheck">IMPRIMIR CUENTA</button>
-					<button className="closeCheck"> ENVIAR ORDEN</button>
+					<button className="closeCheck" onClick={this.props.eraseAll} > ENVIAR ORDEN</button>
 				</div>
 
 			</div>

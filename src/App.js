@@ -49,7 +49,12 @@ class App extends Component {
     })
     return;
   };
-
+  eraseAll = (items) => {
+    this.setState({
+      selectedItem: []
+    })
+    alert("Tu orden se ha enviado a cocina")
+  }
   render() {
     return (
       <div className="mainContainer">
@@ -73,6 +78,7 @@ class App extends Component {
               selectedItem={this.state.selectedItem}
               deleteEvent={this.deleteEvent}
               addPrice={this.state.price}
+              eraseAll={this.eraseAll}
             />
           </div>
 
