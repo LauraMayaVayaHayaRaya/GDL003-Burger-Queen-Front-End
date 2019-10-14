@@ -2,32 +2,61 @@
 	display: inline;
 }
 
-input {
+.asignTableNumber {
 	display: inline-block;
 	width: 100%;
+	padding: 0 20px;
+}
+
+input {
+	display: inline-block;
+	width: 25%;
+	padding: 20px 10px;
+	font-size: 22px;
+	font-family: 'Cormorant Garamond', serif;
+	vertical-align: top;
+	border: 2px solid grey;
+	text-align: center;
 }
 
 .buttonOpenTable {
-	width: 100%;
-	padding: 20px;
+	display: inline-block;
+	width: 50%;
+	padding: 10px 10px;
 	font-size: 20px;
-	margin-left: 20px;
-	margin-top: 18px;
-	margin-bottom: 18px;
 	font-family: 'Cormorant Garamond', serif;
-	font-weight: bold;
-	box-shadow:10px 10px grey;
+	font-weight: bolder;
+	color: #666;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-}
-
-.asignTableNumber {
-	display: inline-block;
-	width: 50%;
+	vertical-align: top;
+	text-align: center;
+	background-image: linear-gradient(to right, #72c2b7 0%, #d7dde8 100%);
 }
 
 .createOrderByTable {
 	display: inline-block;
 	width: 50%;
+}
+
+.tableButton {
+	display: block;
+	padding: 15px 30px;
+	margin: 0 20px 15px 20px;
+	width: 80%;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 22px;
+	font-weight: bolder;
+	color: #74678a;
+	box-shadow:4px 4px #6666;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: rgb(221,221,221);
+	background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.openTables {
+	margin-top: 30px;
 }

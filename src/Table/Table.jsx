@@ -5,7 +5,6 @@ import './Table.js';
 class Table extends Component {
 	constructor(props) {
 		super(props)
-		
 		this.state = {
 			value: '',
 			tables: []
@@ -29,19 +28,18 @@ class Table extends Component {
 	render () {
 		return(
 			<div className="tableSection">
+				<p>MESAS</p>
 
 				<div className="asignTableNumber">
-					
 						<input type="number" min="0" max="5" id="table" placeholder="Mesa" value={this.state.value} required
 						onChange={this.onChangeValue}/>
-						<button className="buttonOpenTable" disabled={!this.state.value} onClick={this.onAddItem}>ABRIR CUENTA</button>
-					
+						<button className="buttonOpenTable" disabled={!this.state.value} onClick={this.onAddItem}>
+						ABRIR CUENTA</button>
 				</div>
-
 
 				<div className="openTables">
 				{this.state.tables.map(table => (
-            <button className="categoriesButton" key={table}>MESA {table}</button>
+          <button className="tableButton" key={table}>MESA {table}</button>
           ))}
 				</div>
 

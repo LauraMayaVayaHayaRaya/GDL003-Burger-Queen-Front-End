@@ -9,34 +9,20 @@ class Menu extends Component {
 	}
 
 	render() {
-
 		return (
 			<div className="Menu">
-				<p>Menú</p>
-
-			
-
+				<p>MENÚ</p>
 				<div className="categoriesMenu">
 					{menuJson.categories.map((product) =>
-						<button className="categoriesButton"
-							key={product.key}
-
-							onClick={() => this.setState({ subcategory: product.subcategories })} >
-							{product.name}
+						<button className="categoriesButton" key={product.key} onClick={() => this.setState({ subcategory: product.subcategories })} > {product.name}
 						</button>)
 					}
 				</div>
-				<div className="subMenu">
-					{
-						this.state.subcategory ?
-
-							this.state.subcategory.map((product) =>
-								<button className="subMenuButton"
-									key={product.key}
-
-									onClick={() => this.props.onProductSelected(product)}>
-									{product.name}
-								</button>)
+				<div className="subMenu"> {
+					this.state.subcategory ?
+					this.state.subcategory.map((product) =>
+					<button className="subMenuButton" key={product.key} onClick={() => this.props.onProductSelected(product)}>{product.name}
+					</button>)
 							: null
 					}
 				</div>

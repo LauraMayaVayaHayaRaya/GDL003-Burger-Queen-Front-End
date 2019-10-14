@@ -3,30 +3,39 @@ import './Board.css';
 
 
 class Board extends Component {
-
 	render() {
 		return (
 			<div className="orderSection">
 
+				<p className="amount">Total: $ {this.props.addPrice}.00</p>
+
 				<div className="order" >
 					{this.props.selectedItem.map((element, index) => {
 						console.log(element.name, element.price)
-						return (<li className="productsOrder" key={element.id}> {element.name} {element.price}
-							{<button key={element.id} className="remove" onClick={() =>
+
+						return (
+						<div className="productsOrder" key={element.id}>
+							<div className="productsOrderName">
+							{element.name}
+							</div>
+
+							<div className="productsOrderPrice" >
+							{element.price}
+							</div>
+
+							<div className="productsOrderRemove">
+							{<button  key={element.id} className="remove" onClick={() =>
 								this.props.deleteEvent(index)}
+								>X</button>}
+							</div>
 
-							
-							>Remove It</button>}  </li>)
-
+						</div>)
 					})}
-
-
 				</div>
 
 				<div className="orderButtons">
-					<p>Total: $ {this.props.addPrice}.00</p>
 					<button className="printCheck">IMPRIMIR CUENTA</button>
-					<button className="closeCheck"> CERRAR CUENTA</button>
+					<button className="closeCheck"> ENVIAR ORDEN</button>
 				</div>
 
 			</div>
@@ -35,7 +44,4 @@ class Board extends Component {
 }
 
 export default Board;
-
-
-
 

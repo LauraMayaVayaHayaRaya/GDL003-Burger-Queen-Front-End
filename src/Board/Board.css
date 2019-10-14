@@ -1,6 +1,6 @@
 .order {
 	width: 95%;
-	height: 500px;
+	height: 400px;
 	background-color: #000;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -9,52 +9,96 @@
 	text-align: center;
 	/*margin-top: 60px;
 	margin-bottom: 30px;*/
-	margin: 60px 5px 30px 15px;
+	margin: 20px 5px 15px 15px;
+	position: relative;
 }
 
-.removeButton {
-	display: block;
-	width: 1px;
-	height: 1px;
-	text-align: center;
-	margin-block: 0;
+.order::after {
+	background-image: url(../img/logo-blanco.svg);
+	content: "";
+	opacity: .20;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 0;
+
 }
 
 .orderButtons {
 	width: 100%;
 	display: inline-block;
 	text-align: center;
+
 }
 
 .printCheck {
-	display: inline;
-	padding: 30px;
+	display: inline-block;
+	padding: 15px 30px;
 	margin: 0 20px 15px 20px;
-	/*width: 300px;*/
+	width: 40%;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 22px;
 	font-weight: bolder;
-	color: dimgrey;
-	box-shadow:10px 10px grey;
+	color: #666;
+	box-shadow:3px 3px #6666;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	background-image: linear-gradient(to right, #72c2b7 0%, #d7dde8 100%);
 }
 
 .closeCheck {
-	display: inline;
-	padding: 30px;
+	display: inline-block;
+	padding: 15px 30px;
 	margin: 0 20px 15px 20px;
-	/*width: 300px;*/
+	width: 40%;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 22px;
 	font-weight: bolder;
-	color: dimgrey;
-	box-shadow:10px 10px grey;
+	color: #666;
+	box-shadow:4px 4px #6666;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	background-image: linear-gradient(to right, #72c2b7 0%, #d7dde8 100%);
 }
 
+.productsOrder {
+	width: 100%;
+	position: relative;
+	z-index: 100;
+}
 
+.amount {
+	text-align: right;
+	/*font-weight: bold;*/
+}
 
+.productsOrderName {
+	width: 60%;
+	display: inline-block;
+	font-size: 22px;
+	font-family: 'Cormorant Garamond', serif;
+
+}
+
+.productsOrderPrice {
+	width: 20%;
+	display: inline-block;
+	font-size: 22px;
+	font-family: 'Cormorant Garamond', serif;
+}
+
+.productsOrderRemove {
+	width: 20%;
+	display: inline-block;
+}
+
+.remove {
+	display: inline-block;
+}

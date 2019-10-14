@@ -1,28 +1,35 @@
 body {
-  background-color: #fff;
+  background-color: rgb(235, 233, 223);
 }
 
 .App-header {
-  background-color:#53c2be;
+  /*background-color:#53c2be;*/
   display: block;
   padding: 10px;
   text-align: center;
+  background: rgb(83,194,190);
+background: linear-gradient(0deg, rgba(83,194,190,1) 0%, rgba(69,255,248,1) 100%);
 }
 
 .App-logo {
   height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px;
 }
 
 h1 {
-/*font-family: 'Parisienne', cursive;*/
-font-family: 'Cormorant Garamond', serif;
-/*font-family: 'Raleway', sans-serif;*/
-  font-size: 75px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 85px;
   font-weight: lighter;
-  color: #756126;
+  color: #ffffff;
   margin: 0;
   line-height: 60px;
-  text-shadow: -3px 2px 0 #47706e;
+  text-shadow: -3px 2px 0 #74678a;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 20px;
+
 }
 
 h3 {

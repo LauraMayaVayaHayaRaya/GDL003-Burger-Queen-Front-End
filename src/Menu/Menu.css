@@ -1,50 +1,54 @@
 p {
-	margin-left: 20px;
-	margin-top: 18px;
-	margin-bottom: 18px;
+	margin: 20px;
 	font-family: 'Cormorant Garamond', serif;
-	font-size: 45px;
+	font-size: 30px;
+	
 }
 
 .categoriesMenu {
 	display: inline-block;
 	width: 50%;
+	vertical-align: top;
 }
 
 .categoriesButton {
 	display: block;
-	padding: 30px;
+	padding: 15px 30px;
 	margin: 0 20px 15px 20px;
-	width: 100%;
+	width: 80%;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 22px;
-	font-weight: bolder;
-	color: dimgrey;
-	box-shadow:10px 10px grey;
+	font-weight: bold;
+	color: #666;
+	box-shadow:4px 4px #6666;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	background-image: linear-gradient(to right, #72c2b7 0%, #d7dde8 100%);
 }
 
 .subMenu{
 	display: inline-block;
 	width: 50%;
-	height: 400px;
+	height: 450px;
 	overflow: auto;
 	margin-top: 0px;
+	vertical-align: top;
 }
 
 .subMenuButton {
 	display: block;
-	padding: 20px;
+	padding: 15px 30px;
 	margin: 0 20px 15px 20px;
-	width: 100%;
+	width: 90%;
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 22px;
 	font-weight: bolder;
-	color: dimgrey;
+	color: #74678a;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	background: rgb(221,221,221);
+	background: linear-gradient(0deg, rgba(221,221,221,1) 0%, rgba(255,255,255,1) 100%);
 }
 
