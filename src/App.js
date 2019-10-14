@@ -51,7 +51,8 @@ class App extends Component {
   };
   eraseAll = (items) => {
     this.setState({
-      selectedItem: []
+      selectedItem: [],
+      price:0
     })
     alert("Tu orden se ha enviado a cocina")
   }
